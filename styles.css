@@ -88,6 +88,25 @@ body::before {
   height: auto;
 }
 
+.brand-name,
+.brand-role {
+  display: block;
+}
+
+.brand-name {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: -0.03em;
+}
+
+.brand-role {
+  margin-top: 0.2rem;
+  color: var(--muted);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -1042,6 +1061,83 @@ h3 {
   min-height: 0;
 }
 
+.about-identity-panel {
+  width: min(100%, 44rem);
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.032), rgba(255, 255, 255, 0.015)),
+    rgba(9, 12, 12, 0.88);
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.18);
+}
+
+.about-identity-panel h2 {
+  width: auto;
+  margin: 0.55rem 0 0;
+}
+
+.about-identity-panel p {
+  margin: 0.9rem 0 0;
+  color: var(--muted);
+}
+
+.about-identity-grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.about-identity-grid > div {
+  padding-top: 0.95rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.about-identity-grid strong {
+  display: block;
+  margin-top: 0.45rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.about-page .about-hero {
+  min-height: auto;
+  padding: 1.25rem 0 2rem;
+  overflow: visible;
+}
+
+.about-page .hero-inner {
+  width: min(calc(100% - 3rem), var(--section-max));
+  min-height: auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(20rem, 0.92fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+.about-page .hero-copy {
+  display: block;
+  min-height: auto;
+  padding: 0.85rem 0 0.25rem;
+}
+
+.about-page .hero-copy .hero-text {
+  max-width: 42rem;
+}
+
+.about-page .hero-actions {
+  justify-content: flex-start;
+}
+
+.about-page .hero-canvas {
+  position: relative;
+  inset: auto;
+  z-index: 2;
+  min-height: auto;
+  overflow: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
 .systems-layout {
   display: grid;
   grid-template-columns: 0.82fr 1.18fr;
@@ -1632,6 +1728,15 @@ h3 {
   .credential-card-wide {
     grid-column: auto;
   }
+
+  .about-page .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .about-page .hero-copy {
+    padding: 0.7rem 0 0.2rem;
+  }
 }
 
 @media (max-width: 720px) {
@@ -1705,5 +1810,14 @@ h3 {
 
   .project-row {
     gap: 0.4rem;
+  }
+
+  .about-page .about-hero {
+    padding-top: 1rem;
+  }
+
+  .about-page .hero-canvas {
+    inset: auto;
+    opacity: 1;
   }
 }

@@ -72,12 +72,12 @@
     }
   </script>
 </head>
-<body>
+<body class="about-page">
   <header class="site-header">
     <div class="header-inner">
-      <a class="brand" href="index.html">
-        <span class="brand-name">Aria Rahimi</span>
-        <span class="brand-role">Systems Builder</span>
+      <a class="brand" href="index.html" aria-label="Aria Rahimi home">
+        <img class="brand-mark" src="assets/aria-rahimi-logo-header.png" alt="Aria Rahimi">
+        <span class="sr-only">Aria Rahimi</span>
       </a>
       <nav class="site-nav" aria-label="Primary">
         <a href="index.html#work">Work</a>
@@ -91,7 +91,7 @@
   </header>
 
   <main>
-    <section class="hero reveal">
+    <section class="hero reveal about-hero">
       <div class="hero-inner">
         <div class="hero-copy">
           <p class="eyebrow">Background</p>
@@ -100,20 +100,36 @@
             Aria Rahimi works across HVAC, refrigeration, low-voltage systems, smart-home integration, embedded hardware,
             networking infrastructure, Home Assistant environments, controls, electronics prototyping, website design, and full stack development.
           </p>
+          <p class="hero-text">
+            This About page exists to give Aria Rahimi one clear identity page for search, background, and public context, separate from the project-heavy homepage.
+          </p>
           <div class="hero-actions">
-          <a class="button button-primary" href="index.html">Back to home</a>
-          <a class="button button-secondary" href="https://www.linkedin.com/in/arya-ra-96177697/" target="_blank" rel="noreferrer">LinkedIn profile</a>
-          <a class="button button-secondary" href="https://github.com/khalkhali" target="_blank" rel="noreferrer">GitHub profile</a>
-        </div>
+            <a class="button button-primary" href="index.html">Back to home</a>
+            <a class="button button-secondary" href="https://www.linkedin.com/in/arya-ra-96177697/" target="_blank" rel="noreferrer">LinkedIn profile</a>
+            <a class="button button-secondary" href="https://github.com/khalkhali" target="_blank" rel="noreferrer">GitHub profile</a>
+          </div>
         </div>
 
         <div class="hero-canvas" aria-hidden="true">
-          <figure class="bench-photo about-photo">
-            <img
-              src="assets/builder-environment.jpg"
-              alt="Aria Rahimi builder environment with HVAC equipment, multi-screen workstation, hardware prototyping, and audio gear."
-            >
-          </figure>
+          <div class="about-identity-panel">
+            <span class="contact-label">Identity snapshot</span>
+            <h2>Aria Rahimi</h2>
+            <p>Systems builder across HVAC, low-voltage controls, networking, embedded hardware, website design, and full stack development.</p>
+            <div class="about-identity-grid">
+              <div>
+                <span class="surface-label">Search forms</span>
+                <strong>Aria Rahimi, Aria Rahim, Arya Ra</strong>
+              </div>
+              <div>
+                <span class="surface-label">Current focus</span>
+                <strong>SynapticLYnk, ThermoNerve, NervoBrain</strong>
+              </div>
+              <div>
+                <span class="surface-label">Strength</span>
+                <strong>Field systems + software + controls</strong>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -123,7 +139,7 @@
         <div class="section-heading">
           <p class="eyebrow">Identity</p>
           <h2>What Aria Rahimi builds</h2>
-          <p>A short background page for the work, systems range, and public links behind the main site.</p>
+          <p>A focused background page for the work, systems range, and public links behind the main site.</p>
         </div>
         <div class="work-layout">
           <div class="work-intro">
