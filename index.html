@@ -11,6 +11,11 @@
   <meta name="author" content="Aria Rahimi">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#101313">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com data:; style-src 'self' https://fonts.googleapis.com; script-src 'self' 'unsafe-inline'; connect-src 'self'; form-action 'self'; upgrade-insecure-requests; block-all-mixed-content"
+  >
   <meta name="google-site-verification" content="rgLT6cJV5y6i4L069ZMYOQ1Z0VrgQkDRm1UdxUIrUEo">
   <link rel="canonical" href="https://ariarahimi.com/">
   <meta property="og:title" content="Aria Rahimi | HVAC, Controls, Networking, Embedded Systems, Full Stack Development">
@@ -132,7 +137,6 @@
         aria-expanded="false"
         aria-controls="primary-nav"
         aria-label="Open navigation menu"
-        onclick="const header=this.closest('.site-header'); const open=header.classList.toggle('nav-open'); this.setAttribute('aria-expanded', String(open)); this.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');"
       >
         <span class="nav-toggle-icon" aria-hidden="true">
           <span></span>
@@ -140,12 +144,7 @@
           <span></span>
         </span>
       </button>
-      <nav
-        class="site-nav"
-        id="primary-nav"
-        aria-label="Primary"
-        onclick="if (window.innerWidth <= 720 && event.target.closest('a')) { const header=this.closest('.site-header'); const toggle=header.querySelector('.nav-toggle'); header.classList.remove('nav-open'); if (toggle) { toggle.setAttribute('aria-expanded', 'false'); toggle.setAttribute('aria-label', 'Open navigation menu'); } }"
-      >
+      <nav class="site-nav" id="primary-nav" aria-label="Primary">
         <a href="#work">Work</a>
         <a href="#projects">Projects</a>
         <a href="#proof">Proof</a>
