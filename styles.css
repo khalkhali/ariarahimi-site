@@ -63,7 +63,7 @@ body::before {
 }
 
 .header-inner {
-  min-height: 82px;
+  min-height: 92px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -81,21 +81,34 @@ body::before {
 .brand {
   display: flex;
   flex-direction: column;
-  gap: 0.18rem;
+  gap: 0.28rem;
+  flex-shrink: 0;
 }
 
-.brand-name {
-  font-family: "Space Grotesk", sans-serif;
-  font-size: 1.18rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+.brand-mark {
+  display: block;
+  width: clamp(12.5rem, 21vw, 18.25rem);
+  height: auto;
 }
 
 .brand-role {
   color: var(--muted);
-  font-size: 0.85rem;
-  letter-spacing: 0.08em;
+  margin-left: 7rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .site-nav {
@@ -1233,6 +1246,14 @@ h3 {
     align-items: flex-start;
     flex-direction: column;
     padding: 1rem 0;
+  }
+
+  .brand-mark {
+    width: min(15.5rem, 72vw);
+  }
+
+  .brand-role {
+    margin-left: 4.65rem;
   }
 
   .site-nav {
