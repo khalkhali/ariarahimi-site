@@ -1302,6 +1302,63 @@ h3 {
   margin: 0;
 }
 
+.faq-list {
+  display: grid;
+  gap: 0.95rem;
+}
+
+.faq-item {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+  transition: border-color 180ms ease, background 180ms ease, transform 180ms ease;
+}
+
+.faq-item[open] {
+  border-color: rgba(240, 178, 112, 0.28);
+  background: rgba(255, 255, 255, 0.045);
+}
+
+.faq-item:hover {
+  transform: translateY(-1px);
+}
+
+.faq-item summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 1.1rem 3.8rem 1.1rem 1.2rem;
+  position: relative;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: "+";
+  position: absolute;
+  right: 1.2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--warm);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.faq-item[open] summary::after {
+  content: "−";
+}
+
+.faq-item p {
+  margin: 0;
+  padding: 0 1.2rem 1.2rem;
+  color: var(--muted);
+  max-width: 72ch;
+}
+
 .credential-card-wide {
   grid-column: span 2;
 }
