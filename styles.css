@@ -202,34 +202,34 @@ body::before {
 }
 
 .hero-tech-ring-outer {
-  stroke: rgba(104, 228, 240, 0.22);
+  stroke: rgba(222, 122, 49, 0.28);
   stroke-width: 8.5;
   stroke-dasharray: 10 18;
 }
 
 .hero-tech-ring-mid {
-  stroke: rgba(132, 150, 255, 0.22);
+  stroke: rgba(240, 178, 112, 0.24);
   stroke-width: 7.25;
 }
 
 .hero-tech-ring-core {
-  stroke: rgba(255, 111, 183, 0.18);
+  stroke: rgba(255, 179, 71, 0.24);
   stroke-width: 6.25;
 }
 
 .hero-tech-axis {
-  stroke: rgba(142, 220, 233, 0.34);
+  stroke: rgba(240, 178, 112, 0.3);
   stroke-width: 6.75;
 }
 
 .hero-tech-node-dot {
-  fill: #7fefff;
-  filter: drop-shadow(0 0 8px rgba(83, 247, 255, 0.82));
+  fill: #f0b270;
+  filter: drop-shadow(0 0 8px rgba(240, 178, 112, 0.82));
 }
 
 .hero-tech-node-dot-warm {
-  fill: #ffad73;
-  filter: drop-shadow(0 0 8px rgba(255, 173, 115, 0.68));
+  fill: #df7d31;
+  filter: drop-shadow(0 0 8px rgba(223, 125, 49, 0.78));
 }
 
 .hero-tech-core {
@@ -237,7 +237,7 @@ body::before {
   inset: 50% auto auto 50%;
   width: 10.8rem;
   padding: 1rem 1rem 0.95rem;
-  border: 1px solid rgba(133, 228, 241, 0.18);
+  border: 1px solid rgba(240, 178, 112, 0.22);
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.008)),
     rgba(8, 12, 14, 0.5);
@@ -248,7 +248,7 @@ body::before {
 }
 
 .hero-tech-core span {
-  color: rgba(192, 238, 245, 0.72);
+  color: rgba(240, 206, 163, 0.8);
   font-size: 0.72rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -318,7 +318,7 @@ body::before {
   position: absolute;
   width: 11.8rem;
   padding: 0.9rem 1rem 0.8rem;
-  border: 1px solid rgba(133, 228, 241, 0.14);
+  border: 1px solid rgba(240, 178, 112, 0.16);
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.032), rgba(255, 255, 255, 0.01)),
     rgba(8, 12, 14, 0.46);
@@ -494,9 +494,9 @@ h3 {
   inset: -4% -2%;
   border-radius: 999px;
   background:
-    radial-gradient(circle at 52% 18%, rgba(78, 242, 255, 0.14), transparent 24%),
-    radial-gradient(circle at 72% 42%, rgba(255, 111, 183, 0.09), transparent 18%),
-    radial-gradient(circle at 36% 74%, rgba(127, 155, 255, 0.1), transparent 20%);
+    radial-gradient(circle at 52% 18%, rgba(255, 179, 71, 0.14), transparent 24%),
+    radial-gradient(circle at 72% 42%, rgba(223, 125, 49, 0.13), transparent 18%),
+    radial-gradient(circle at 36% 74%, rgba(240, 178, 112, 0.1), transparent 20%);
   filter: blur(64px);
 }
 
@@ -525,7 +525,7 @@ h3 {
 
 .pcb-board {
   fill: rgba(8, 14, 20, 0.72);
-  stroke: rgba(120, 245, 255, 0.2);
+  stroke: rgba(240, 178, 112, 0.2);
   stroke-width: 2;
 }
 
@@ -540,18 +540,18 @@ h3 {
 }
 
 .pcb-grid-line {
-  stroke: rgba(92, 160, 172, 0.2);
+  stroke: rgba(137, 106, 76, 0.22);
   stroke-width: 0.75;
 }
 
 .pcb-trace,
 .pcb-branch {
-  stroke: rgba(67, 117, 136, 0.48);
+  stroke: rgba(122, 94, 67, 0.5);
   stroke-width: 2.6;
 }
 
 .pcb-bus {
-  stroke: rgba(84, 174, 194, 0.16);
+  stroke: rgba(240, 178, 112, 0.14);
   stroke-width: 1.3;
   stroke-dasharray: 4 16;
 }
@@ -565,7 +565,7 @@ h3 {
   stroke-width: 1.55;
   stroke-dasharray: 10 180;
   animation: trace-run 5.4s linear infinite;
-  filter: drop-shadow(0 0 6px rgba(83, 247, 255, 0.46));
+  filter: drop-shadow(0 0 6px rgba(223, 125, 49, 0.5));
 }
 
 .trace-delay-1 { animation-delay: 0.45s; }
@@ -986,13 +986,13 @@ h3 {
 }
 
 .control-grid-line {
-  stroke: rgba(111, 218, 240, 0.18);
+  stroke: rgba(196, 142, 85, 0.2);
   stroke-width: 1.2;
   stroke-dasharray: 4 10;
 }
 
 .control-trace {
-  stroke: rgba(64, 116, 138, 0.7);
+  stroke: rgba(131, 97, 64, 0.72);
   stroke-width: 2.9;
 }
 
@@ -1009,17 +1009,17 @@ h3 {
   stroke-width: 1.65;
   stroke-dasharray: 10 112;
   animation: trace-run 3.7s linear infinite;
-  filter: drop-shadow(0 0 6px rgba(83, 247, 255, 0.75));
+  filter: drop-shadow(0 0 6px rgba(223, 125, 49, 0.68));
 }
 
 .control-chip {
   fill: rgba(13, 22, 30, 0.96);
-  stroke: rgba(124, 236, 255, 0.22);
+  stroke: rgba(240, 178, 112, 0.24);
   stroke-width: 1.3;
 }
 
 .control-chip-core {
-  stroke: rgba(255, 111, 183, 0.34);
+  stroke: rgba(255, 179, 71, 0.36);
 }
 
 .bench-photo {
