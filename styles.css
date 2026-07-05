@@ -1102,6 +1102,78 @@ h3 {
   gap: 1.4rem;
 }
 
+.skills-layout,
+.credentials-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.skills-layout {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.credentials-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.skill-group,
+.credential-card {
+  padding: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.015)),
+    rgba(10, 13, 13, 0.72);
+}
+
+.skill-group h3,
+.credential-card h3 {
+  margin: 0.45rem 0 0;
+}
+
+.skill-group p,
+.credential-card p {
+  margin: 0.8rem 0 0;
+}
+
+.skill-tags {
+  display: flex;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.skill-tags span {
+  padding: 0.56rem 0.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.skills-summary {
+  margin-top: 1.4rem;
+  max-width: 56rem;
+}
+
+.skills-summary p {
+  margin: 0;
+}
+
+.credential-card-wide {
+  grid-column: span 2;
+}
+
+.credential-note,
+.credential-detail {
+  color: var(--muted);
+}
+
+.credential-detail {
+  font-size: 0.88rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
 .background-list {
   list-style: none;
   margin: 0;
@@ -1438,6 +1510,8 @@ h3 {
   .proof-stage,
   .systems-layout,
   .background-layout,
+  .skills-layout,
+  .credentials-grid,
   .contact-grid,
   .method-list {
     grid-template-columns: 1fr;
@@ -1553,6 +1627,10 @@ h3 {
 
   .background-list {
     margin-top: 0;
+  }
+
+  .credential-card-wide {
+    grid-column: auto;
   }
 }
 
