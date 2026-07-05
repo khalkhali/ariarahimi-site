@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Aria Rahimi systems builder preview</title>
+  <desc id="desc">Social preview image for Aria Rahimi personal website.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0d0d"/>
+      <stop offset="100%" stop-color="#161310"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8fb8ba"/>
+      <stop offset="60%" stop-color="#df7d31"/>
+      <stop offset="100%" stop-color="#f6f1e8"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="72%" cy="44%" r="36%">
+      <stop offset="0%" stop-color="#df7d31" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#df7d31" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <g opacity="0.08" stroke="#f6f1e8" stroke-width="1">
+    <path d="M0 72H1200M0 144H1200M0 216H1200M0 288H1200M0 360H1200M0 432H1200M0 504H1200M0 576H1200"/>
+    <path d="M72 0V630M144 0V630M216 0V630M288 0V630M360 0V630M432 0V630M504 0V630M576 0V630M648 0V630M720 0V630M792 0V630M864 0V630M936 0V630M1008 0V630M1080 0V630M1152 0V630"/>
+  </g>
+  <g transform="translate(72 84)">
+    <text x="0" y="0" fill="#f0b270" font-family="IBM Plex Sans, sans-serif" font-size="20" letter-spacing="5">PROFESSIONAL SYSTEMS BUILDER</text>
+    <text x="0" y="118" fill="#f6f1e8" font-family="Space Grotesk, sans-serif" font-size="78" font-weight="700">Aria Rahimi</text>
+    <text x="0" y="210" fill="#f6f1e8" font-family="Space Grotesk, sans-serif" font-size="56" font-weight="700">HVAC, controls, embedded systems,</text>
+    <text x="0" y="278" fill="#f6f1e8" font-family="Space Grotesk, sans-serif" font-size="56" font-weight="700">networking, and full stack development.</text>
+    <text x="0" y="364" fill="#bdb4a7" font-family="IBM Plex Sans, sans-serif" font-size="28">Systems builder across field systems, hardware, software, and real operations.</text>
+  </g>
+  <g transform="translate(820 140)">
+    <circle cx="160" cy="160" r="128" fill="none" stroke="#f6f1e8" stroke-opacity="0.12" stroke-width="10"/>
+    <circle cx="160" cy="160" r="86" fill="none" stroke="#f6f1e8" stroke-opacity="0.12" stroke-width="6"/>
+    <circle cx="160" cy="160" r="48" fill="none" stroke="#8fb8ba" stroke-opacity="0.35" stroke-width="4"/>
+    <circle cx="160" cy="160" r="24" fill="#17100a" stroke="#f6f1e8" stroke-width="2"/>
+    <path d="M50 102c33-34 69-52 110-56" fill="none" stroke="url(#accent)" stroke-width="5" stroke-linecap="round"/>
+    <path d="M54 210c45-16 90-19 152-8" fill="none" stroke="url(#accent)" stroke-width="5" stroke-linecap="round"/>
+    <path d="M92 286c28 25 61 40 102 44" fill="none" stroke="url(#accent)" stroke-width="5" stroke-linecap="round"/>
+    <g fill="#0e1111" stroke="#f6f1e8" stroke-width="2">
+      <circle cx="50" cy="102" r="7"/>
+      <circle cx="54" cy="210" r="8"/>
+      <circle cx="92" cy="286" r="7"/>
+      <circle cx="244" cy="110" r="7"/>
+      <circle cx="272" cy="214" r="8"/>
+      <circle cx="234" cy="298" r="7"/>
+    </g>
+  </g>
+</svg>
