@@ -1,15 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://ariarahimi.com/</loc>
     <lastmod>2026-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://ariarahimi.com/og-image.svg</image:loc>
+      <image:title>Aria Rahimi systems builder preview</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://ariarahimi.com/assets/builder-environment-ai.png</image:loc>
+      <image:title>Aria Rahimi builder environment</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://ariarahimi.com/about-aria-rahimi.html</loc>
     <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://ariarahimi.com/og-image.svg</image:loc>
+      <image:title>About Aria Rahimi systems builder preview</image:title>
+    </image:image>
   </url>
 </urlset>
