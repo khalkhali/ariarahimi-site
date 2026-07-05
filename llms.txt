@@ -7,6 +7,7 @@ Personal website for Aria Rahimi, a systems builder working across HVAC, refrige
 - Alternate search form: Aria Rahim
 - Role: Systems Builder
 - Website: https://ariarahimi.com/
+- LinkedIn: https://www.linkedin.com/in/arya-ra-96177697/
 - GitHub: https://github.com/khalkhali
 
 ## Core expertise
