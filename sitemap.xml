@@ -25,4 +25,34 @@
       <image:title>About Aria Rahimi systems builder preview</image:title>
     </image:image>
   </url>
+  <url>
+    <loc>https://ariarahimi.com/hvac-refrigeration-controls.html</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://ariarahimi.com/og-image.svg</image:loc>
+      <image:title>HVAC, refrigeration, and controls systems by Aria Rahimi</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ariarahimi.com/low-voltage-smart-home-systems.html</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://ariarahimi.com/og-image.svg</image:loc>
+      <image:title>Low-voltage and smart-home systems by Aria Rahimi</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ariarahimi.com/embedded-full-stack-systems.html</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://ariarahimi.com/og-image.svg</image:loc>
+      <image:title>Embedded hardware, cloud systems, and full stack development by Aria Rahimi</image:title>
+    </image:image>
+  </url>
 </urlset>
