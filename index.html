@@ -88,7 +88,6 @@
       <a class="brand" href="#top" aria-label="Aria Rahimi home">
         <img class="brand-mark" src="assets/aria-rahimi-logo-header.png" alt="Aria Rahimi">
         <span class="sr-only">Aria Rahimi</span>
-        <span class="brand-role">Systems Builder</span>
       </a>
       <nav class="site-nav" aria-label="Primary">
         <a href="#work">Work</a>
@@ -103,84 +102,135 @@
 
   <main id="top">
     <section class="hero reveal">
+      <div class="hero-canvas" aria-hidden="true">
+        <div class="hero-canvas-glow"></div>
+        <svg viewBox="0 0 760 760" class="hero-graphic" role="presentation">
+            <defs>
+              <linearGradient id="pcb-trace-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#4ef2ff"/>
+                <stop offset="42%" stop-color="#7f9bff"/>
+                <stop offset="72%" stop-color="#ff6fb7"/>
+                <stop offset="100%" stop-color="#ffb347"/>
+              </linearGradient>
+              <radialGradient id="pcb-board-glow" cx="50%" cy="48%" r="54%">
+                <stop offset="0%" stop-color="rgba(54, 255, 240, 0.22)"/>
+                <stop offset="58%" stop-color="rgba(143, 89, 255, 0.14)"/>
+                <stop offset="100%" stop-color="rgba(10, 16, 22, 0)"/>
+              </radialGradient>
+              <filter id="pcb-neon-soft" x="-20%" y="-20%" width="140%" height="140%">
+                <feGaussianBlur stdDeviation="6" result="softGlow"/>
+                <feMerge>
+                  <feMergeNode in="softGlow"/>
+                  <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+              </filter>
+              <pattern id="pcb-grid" x="0" y="0" width="36" height="36" patternUnits="userSpaceOnUse">
+                <path d="M36 0H0V36" class="pcb-grid-line"/>
+              </pattern>
+            </defs>
+            <rect x="36" y="54" width="688" height="652" rx="56" class="pcb-board"/>
+            <rect x="70" y="88" width="620" height="584" rx="42" class="pcb-board-inner"/>
+            <rect x="70" y="88" width="620" height="584" rx="42" fill="url(#pcb-grid)" opacity="0.74"/>
+            <rect x="92" y="110" width="576" height="540" rx="34" fill="url(#pcb-board-glow)" class="pcb-board-bloom"/>
+
+            <g class="pcb-routing-base">
+              <path d="M30 176H222V126H384V210H732" class="pcb-trace"/>
+              <path d="M18 248H164V214H286V268H402" class="pcb-trace trace-delay-3"/>
+              <path d="M30 336H194V396H342V304H520V374H732" class="pcb-trace trace-delay-1"/>
+              <path d="M16 444H142V496H252V432H366" class="pcb-trace trace-delay-4"/>
+              <path d="M30 536H286V468H464V594H732" class="pcb-trace trace-delay-2"/>
+              <path d="M126 108V628" class="pcb-bus faint"/>
+              <path d="M224 90V652" class="pcb-bus"/>
+              <path d="M336 118V616" class="pcb-bus faint"/>
+              <path d="M472 86V660" class="pcb-bus faint"/>
+              <path d="M624 124V654" class="pcb-bus faint"/>
+              <path d="M164 214V152H248" class="pcb-branch trace-delay-4"/>
+              <path d="M384 210V304H468" class="pcb-branch trace-delay-1"/>
+              <path d="M252 432V352H336" class="pcb-branch trace-delay-3"/>
+              <path d="M286 468V396H342" class="pcb-branch trace-delay-2"/>
+              <path d="M520 374V280H624" class="pcb-branch trace-delay-3"/>
+            </g>
+
+            <g class="pcb-routing-live" filter="url(#pcb-neon-soft)">
+              <path d="M30 176H222V126H384V210H732" class="pcb-trace-live"/>
+              <path d="M18 248H164V214H286V268H402" class="pcb-trace-live trace-delay-3"/>
+              <path d="M30 336H194V396H342V304H520V374H732" class="pcb-trace-live trace-delay-1"/>
+              <path d="M16 444H142V496H252V432H366" class="pcb-trace-live trace-delay-4"/>
+              <path d="M30 536H286V468H464V594H732" class="pcb-trace-live trace-delay-2"/>
+              <path d="M126 108V628" class="pcb-trace-live trace-delay-1"/>
+              <path d="M472 86V660" class="pcb-trace-live trace-delay-4"/>
+            </g>
+        </svg>
+      </div>
       <div class="hero-inner">
         <div class="hero-copy">
-          <p class="eyebrow">Aria Rahimi</p>
-          <h1>Aria Rahimi builds professional systems across equipment, controls, networking, and real operations.</h1>
-          <p class="hero-text">
-            Aria Rahimi is a systems builder working across HVAC, refrigeration, low-voltage controls, embedded hardware,
-            networking, full stack software, and hands-on field systems. Current work is centered on SynapticLYnk and ThermoNerve.
-          </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#projects">See current work</a>
-            <a class="button button-secondary" href="https://github.com/khalkhali" target="_blank" rel="noreferrer">View GitHub</a>
-            <a class="button button-secondary" href="#background">View background</a>
-          </div>
-          <div class="hero-signals" aria-label="Builder domains">
-            <span>equipment</span>
-            <span>controls</span>
-            <span>network</span>
-            <span>software</span>
-            <span>field systems</span>
-          </div>
-        </div>
-
-        <div class="hero-canvas" aria-hidden="true">
-          <div class="hero-canvas-glow"></div>
-          <svg viewBox="0 0 760 760" class="hero-graphic" role="presentation">
-            <defs>
-              <linearGradient id="signal-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#8fb8ba"/>
-                <stop offset="55%" stop-color="#df7d31"/>
-                <stop offset="100%" stop-color="#f5f1e9"/>
-              </linearGradient>
-              <radialGradient id="core-glow" cx="50%" cy="50%" r="50%">
-                <stop offset="0%" stop-color="rgba(223, 125, 49, 0.65)"/>
-                <stop offset="100%" stop-color="rgba(223, 125, 49, 0)"/>
-              </radialGradient>
-            </defs>
-            <circle cx="380" cy="380" r="235" class="orbit orbit-outer"/>
-            <circle cx="380" cy="380" r="156" class="orbit orbit-inner"/>
-            <circle cx="380" cy="380" r="92" class="orbit orbit-core"/>
-            <circle cx="380" cy="380" r="78" fill="url(#core-glow)" class="core-glow"/>
-            <path d="M254 242c35-42 77-66 126-72" class="signal-path"/>
-            <path d="M506 242c-35-42-77-66-126-72" class="signal-path delay-1"/>
-            <path d="M215 386c52-22 105-28 165-18" class="signal-path delay-2"/>
-            <path d="M545 386c-52-22-105-28-165-18" class="signal-path delay-3"/>
-            <path d="M248 514c38 34 82 54 132 60" class="signal-path delay-4"/>
-            <path d="M512 514c-38 34-82 54-132 60" class="signal-path delay-5"/>
-            <path d="M380 222v315" class="signal-spine"/>
-            <path d="M327 252v255" class="signal-spine faint"/>
-            <path d="M433 252v255" class="signal-spine faint"/>
-            <g class="signal-nodes">
-              <circle cx="252" cy="242" r="9"/>
-              <circle cx="507" cy="242" r="9"/>
-              <circle cx="216" cy="386" r="10"/>
-              <circle cx="544" cy="386" r="10"/>
-              <circle cx="248" cy="514" r="9"/>
-              <circle cx="512" cy="514" r="9"/>
-              <circle cx="380" cy="222" r="10"/>
-              <circle cx="380" cy="537" r="10"/>
-              <circle cx="380" cy="380" r="12"/>
-            </g>
-          </svg>
-
-          <div class="canvas-label canvas-label-top">signal flow</div>
-          <div class="canvas-label canvas-label-right">controls + software</div>
-          <div class="canvas-label canvas-label-left">field logic</div>
-
-          <div class="canvas-callout canvas-callout-top">
-            <span class="canvas-kicker">Live focus</span>
-            <strong>SynapticLYnk</strong>
-            <p>Workflow, routing, field execution, and connected operations.</p>
+          <div class="hero-copy-primary">
+            <h1>Aria Rahimi builds professional systems across equipment, controls, networking, and real operations.</h1>
           </div>
 
-          <div class="canvas-callout canvas-callout-bottom">
-            <span class="canvas-kicker">Hardware track</span>
-            <strong>ThermoNerve</strong>
-            <p>Connected equipment, sensing, controls, and practical hardware-system architecture.</p>
+          <div class="hero-copy-secondary">
+            <p class="hero-text hero-text-secondary">
+              Aria Rahimi is a systems builder working across HVAC, refrigeration, low-voltage controls, embedded hardware,
+              networking, full stack software, and hands-on field systems. Current work is centered on SynapticLYnk and ThermoNerve.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#projects">See current work</a>
+              <a class="button button-secondary" href="https://github.com/khalkhali" target="_blank" rel="noreferrer">View GitHub</a>
+              <a class="button button-secondary" href="#background">View background</a>
+            </div>
+            <div class="hero-signals" aria-label="Builder domains">
+              <span>equipment</span>
+              <span>controls</span>
+              <span>network</span>
+              <span>software</span>
+              <span>field systems</span>
+            </div>
           </div>
         </div>
+
+        <aside class="hero-tech-stack" aria-label="Current technology tracks">
+          <span class="hero-tech-kicker">Current tracks</span>
+          <div class="hero-tech-orbit">
+            <svg viewBox="0 0 420 420" class="hero-tech-rings" role="presentation" aria-hidden="true">
+              <circle cx="210" cy="210" r="136" class="hero-tech-ring hero-tech-ring-outer"/>
+              <circle cx="210" cy="210" r="92" class="hero-tech-ring hero-tech-ring-mid"/>
+              <circle cx="210" cy="210" r="42" class="hero-tech-ring hero-tech-ring-core"/>
+              <path d="M210 74V24" class="hero-tech-axis"/>
+              <path d="M328 146L370 122" class="hero-tech-axis"/>
+              <path d="M116 304L74 334" class="hero-tech-axis"/>
+              <circle cx="210" cy="74" r="7" class="hero-tech-node-dot"/>
+              <circle cx="328" cy="146" r="7" class="hero-tech-node-dot hero-tech-node-dot-warm"/>
+              <circle cx="116" cy="304" r="7" class="hero-tech-node-dot"/>
+            </svg>
+
+            <div class="hero-tech-core">
+              <span>system graph</span>
+              <strong>build stack</strong>
+              <p>field systems, controls, and software working as one layer</p>
+            </div>
+
+            <div class="hero-tech-track hero-tech-track-outer hero-tech-track-slow">
+              <div class="hero-tech-node hero-tech-node-top">
+                <strong>SynapticLYnk</strong>
+                <span>operations, routing, infrastructure</span>
+              </div>
+            </div>
+
+            <div class="hero-tech-track hero-tech-track-mid hero-tech-track-reverse">
+              <div class="hero-tech-node hero-tech-node-right">
+                <strong>ThermoNerve</strong>
+                <span>equipment, controls, embedded hardware</span>
+              </div>
+            </div>
+
+            <div class="hero-tech-track hero-tech-track-diagonal hero-tech-track-fast">
+              <div class="hero-tech-node hero-tech-node-left">
+                <strong>NervoBrain</strong>
+                <span>intelligence layer, AI workflow, system logic</span>
+              </div>
+            </div>
+          </div>
+        </aside>
       </div>
     </section>
 
@@ -249,6 +299,14 @@
           <article class="project-row">
             <div class="project-kicker">03</div>
             <div class="project-body">
+              <h3>NervoBrain</h3>
+              <p>An intelligence and dashboarding layer for turning field activity, system signals, and operational context into usable decisions.</p>
+            </div>
+            <div class="project-note">AI + dashboarding</div>
+          </article>
+          <article class="project-row">
+            <div class="project-kicker">04</div>
+            <div class="project-body">
               <h3>Broader build range</h3>
               <p>Work that also spans embedded devices, mechanical problem solving, physical-world automation, fabrication, and robotics-minded system building.</p>
             </div>
@@ -262,7 +320,7 @@
       <div class="section-inner">
         <div class="section-heading proof-heading">
           <p class="eyebrow">Visual proof</p>
-          <h2>Software surface, control logic, and field credibility in one story.</h2>
+          <h2>Software layer, control logic, and field credibility in one story.</h2>
           <p>
             The work here is grounded in live operations, connected control systems, and practical build environments.
           </p>
@@ -287,6 +345,7 @@
                 <div class="surface-rail">
                   <span>dispatch</span>
                   <span>assets</span>
+                  <span>dashboards</span>
                   <span>zones</span>
                   <span>alerts</span>
                 </div>
@@ -294,6 +353,7 @@
                   <div class="surface-status">
                     <span class="status-pill status-pill-live">live</span>
                     <span class="status-pill">field sync</span>
+                    <span class="status-pill">dashboard ready</span>
                     <span class="status-pill">network healthy</span>
                   </div>
                   <div class="surface-wave" role="presentation">
@@ -326,11 +386,20 @@
                       <strong>Status with context</strong>
                       <p>What is running, what is stuck, and what needs attention next.</p>
                     </div>
+                    <div>
+                      <span class="surface-label">intelligence</span>
+                      <strong>Operational dashboards</strong>
+                      <p>Signal summaries and decision views that help real work move faster.</p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <p class="proof-caption">A real operations product should feel like field logic, not generic SaaS.</p>
+            <div class="proof-caption">
+              <p>SynapticLYnk is meant to solve the gap between field work, equipment reality, team coordination, and software visibility by putting routing, status, context, dashboards, and decision-making into one operational layer, so people are not bouncing between disconnected tools just to understand what is happening, what is blocked, what needs attention next, and how the system should move forward in real time.</p>
+              <p>Instead of treating operations like generic office software, the system is designed around dispatch flow, equipment state, asset awareness, zone logic, alerts, and live field conditions, so the software reflects the actual environment people are working in.</p>
+              <p>The goal is a working surface where teams can see the job path, understand system health, catch issues earlier, and make decisions from one place instead of stitching together messages, spreadsheets, memory, and disconnected dashboards.</p>
+            </div>
           </article>
 
           <article class="proof-panel proof-panel-hardware">
@@ -355,23 +424,27 @@
               </div>
               <svg viewBox="0 0 420 240" class="control-map" role="presentation">
                 <defs>
-                  <linearGradient id="control-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="#8fb8ba"/>
-                    <stop offset="55%" stop-color="#df7d31"/>
-                    <stop offset="100%" stop-color="#f5f1e9"/>
+                  <linearGradient id="control-pcb-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#53f7ff"/>
+                    <stop offset="46%" stop-color="#8d7dff"/>
+                    <stop offset="100%" stop-color="#ff8a5a"/>
                   </linearGradient>
                 </defs>
-                <circle cx="82" cy="58" r="9" class="control-node"/>
-                <circle cx="186" cy="52" r="9" class="control-node"/>
-                <circle cx="318" cy="74" r="11" class="control-node control-node-core"/>
-                <circle cx="110" cy="170" r="10" class="control-node"/>
-                <circle cx="236" cy="186" r="9" class="control-node"/>
-                <circle cx="352" cy="164" r="9" class="control-node"/>
-                <path d="M82 58H186L236 186H352" class="control-trace"/>
-                <path d="M186 52L318 74L352 164" class="control-trace control-trace-delay"/>
-                <path d="M82 58L110 170L236 186" class="control-trace control-trace-delay-2"/>
-                <path d="M110 170H352" class="control-grid-line"/>
-                <path d="M318 74V164" class="control-grid-line"/>
+                <rect x="18" y="22" width="384" height="196" rx="24" class="control-board"/>
+                <rect x="34" y="38" width="352" height="164" rx="18" class="control-board-inner"/>
+                <path d="M46 68H128V102H192V62H284V106H376" class="control-trace"/>
+                <path d="M46 122H96V170H176V124H246V188H376" class="control-trace control-trace-delay"/>
+                <path d="M46 178H138V148H210V198H302V148H376" class="control-trace control-trace-delay-2"/>
+                <path d="M84 50V192" class="control-grid-line"/>
+                <path d="M208 46V194" class="control-grid-line"/>
+                <path d="M328 54V194" class="control-grid-line"/>
+                <rect x="114" y="84" width="54" height="38" rx="7" class="control-chip"/>
+                <rect x="230" y="82" width="62" height="44" rx="7" class="control-chip control-chip-core"/>
+                <rect x="154" y="156" width="70" height="34" rx="7" class="control-chip"/>
+                <g class="control-live" filter="url(#pcb-neon-soft)">
+                  <path d="M46 68H128V102H192V62H284V106H376" class="control-trace-live"/>
+                  <path d="M46 122H96V170H176V124H246V188H376" class="control-trace-live control-trace-delay"/>
+                </g>
               </svg>
             </div>
             <p class="proof-caption">ThermoNerve sits where equipment behavior, sensing, and control feedback loops meet.</p>
@@ -385,11 +458,11 @@
             <figure class="bench-photo">
               <img
                 src="assets/builder-environment-ai.png"
-                alt="Aria Rahimi builder environment with HVAC equipment, multi-screen workstation, hardware prototyping, and audio gear."
+                alt="Aria Rahimi builder environment with HVAC equipment, multi-screen workstation, hardware prototyping, and electronics bench tools."
                 loading="lazy"
               >
             </figure>
-            <p class="proof-caption">Edited from a real builder environment: HVAC equipment, workstation screens, prototyping hardware, audio tools, and live project work in one place.</p>
+            <p class="proof-caption">Edited from a real builder environment: HVAC equipment, workstation screens, prototyping hardware, multimeters, soldering and diagnostic tools, wire work, screen-driver setup, and live project work in one place.</p>
           </article>
         </div>
       </div>
@@ -478,7 +551,7 @@
     <section class="section reveal public-surfaces">
       <div class="section-inner">
         <div class="section-heading">
-          <p class="eyebrow">Public surfaces</p>
+          <p class="eyebrow">Public presence</p>
           <h2>The public record should match the real work.</h2>
         </div>
         <div class="proof-links">
