@@ -79,7 +79,26 @@
         <img class="brand-mark" src="assets/aria-rahimi-logo-header.png" alt="Aria Rahimi">
         <span class="sr-only">Aria Rahimi</span>
       </a>
-      <nav class="site-nav" aria-label="Primary">
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="primary-nav"
+        aria-label="Open navigation menu"
+        onclick="const header=this.closest('.site-header'); const open=header.classList.toggle('nav-open'); this.setAttribute('aria-expanded', String(open)); this.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');"
+      >
+        <span class="nav-toggle-icon" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </button>
+      <nav
+        class="site-nav"
+        id="primary-nav"
+        aria-label="Primary"
+        onclick="if (window.innerWidth <= 720 && event.target.closest('a')) { const header=this.closest('.site-header'); const toggle=header.querySelector('.nav-toggle'); header.classList.remove('nav-open'); if (toggle) { toggle.setAttribute('aria-expanded', 'false'); toggle.setAttribute('aria-label', 'Open navigation menu'); } }"
+      >
         <a href="index.html#work">Work</a>
         <a href="index.html#projects">Projects</a>
         <a href="index.html#proof">Proof</a>

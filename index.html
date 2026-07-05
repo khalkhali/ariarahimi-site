@@ -126,7 +126,26 @@
         <img class="brand-mark" src="assets/aria-rahimi-logo-header.png" alt="Aria Rahimi">
         <span class="sr-only">Aria Rahimi</span>
       </a>
-      <nav class="site-nav" aria-label="Primary">
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="primary-nav"
+        aria-label="Open navigation menu"
+        onclick="const header=this.closest('.site-header'); const open=header.classList.toggle('nav-open'); this.setAttribute('aria-expanded', String(open)); this.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');"
+      >
+        <span class="nav-toggle-icon" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </button>
+      <nav
+        class="site-nav"
+        id="primary-nav"
+        aria-label="Primary"
+        onclick="if (window.innerWidth <= 720 && event.target.closest('a')) { const header=this.closest('.site-header'); const toggle=header.querySelector('.nav-toggle'); header.classList.remove('nav-open'); if (toggle) { toggle.setAttribute('aria-expanded', 'false'); toggle.setAttribute('aria-label', 'Open navigation menu'); } }"
+      >
         <a href="#work">Work</a>
         <a href="#projects">Projects</a>
         <a href="#proof">Proof</a>
@@ -206,6 +225,50 @@
             <h1>Aria Rahimi builds professional systems across equipment, controls, networking, and real operations.</h1>
           </div>
 
+          <aside class="hero-tech-stack" aria-label="Current technology tracks">
+            <span class="hero-tech-kicker">Current tracks</span>
+            <div class="hero-tech-orbit">
+              <svg viewBox="0 0 420 420" class="hero-tech-rings" role="presentation" aria-hidden="true">
+                <circle cx="210" cy="210" r="136" class="hero-tech-ring hero-tech-ring-outer"/>
+                <circle cx="210" cy="210" r="92" class="hero-tech-ring hero-tech-ring-mid"/>
+                <circle cx="210" cy="210" r="42" class="hero-tech-ring hero-tech-ring-core"/>
+                <path d="M210 74V24" class="hero-tech-axis"/>
+                <path d="M328 146L370 122" class="hero-tech-axis"/>
+                <path d="M116 304L74 334" class="hero-tech-axis"/>
+                <circle cx="210" cy="74" r="7" class="hero-tech-node-dot"/>
+                <circle cx="328" cy="146" r="7" class="hero-tech-node-dot hero-tech-node-dot-warm"/>
+                <circle cx="116" cy="304" r="7" class="hero-tech-node-dot"/>
+              </svg>
+
+              <div class="hero-tech-core">
+                <span>system graph</span>
+                <strong>build stack</strong>
+                <p>field systems, controls, and software working as one layer</p>
+              </div>
+
+              <div class="hero-tech-track hero-tech-track-outer hero-tech-track-slow">
+                <div class="hero-tech-node hero-tech-node-top">
+                  <strong>SynapticLYnk</strong>
+                  <span>operations, routing, infrastructure</span>
+                </div>
+              </div>
+
+              <div class="hero-tech-track hero-tech-track-mid hero-tech-track-reverse">
+                <div class="hero-tech-node hero-tech-node-right">
+                  <strong>ThermoNerve</strong>
+                  <span>equipment, controls, embedded hardware</span>
+                </div>
+              </div>
+
+              <div class="hero-tech-track hero-tech-track-diagonal hero-tech-track-fast">
+                <div class="hero-tech-node hero-tech-node-left">
+                  <strong>NervoBrain</strong>
+                  <span>intelligence layer, AI workflow, system logic</span>
+                </div>
+              </div>
+            </div>
+          </aside>
+
           <div class="hero-copy-secondary">
             <p class="hero-text hero-text-secondary">
               Aria Rahimi is a systems builder working across HVAC, refrigeration, low-voltage controls, embedded hardware,
@@ -225,50 +288,6 @@
             </div>
           </div>
         </div>
-
-        <aside class="hero-tech-stack" aria-label="Current technology tracks">
-          <span class="hero-tech-kicker">Current tracks</span>
-          <div class="hero-tech-orbit">
-            <svg viewBox="0 0 420 420" class="hero-tech-rings" role="presentation" aria-hidden="true">
-              <circle cx="210" cy="210" r="136" class="hero-tech-ring hero-tech-ring-outer"/>
-              <circle cx="210" cy="210" r="92" class="hero-tech-ring hero-tech-ring-mid"/>
-              <circle cx="210" cy="210" r="42" class="hero-tech-ring hero-tech-ring-core"/>
-              <path d="M210 74V24" class="hero-tech-axis"/>
-              <path d="M328 146L370 122" class="hero-tech-axis"/>
-              <path d="M116 304L74 334" class="hero-tech-axis"/>
-              <circle cx="210" cy="74" r="7" class="hero-tech-node-dot"/>
-              <circle cx="328" cy="146" r="7" class="hero-tech-node-dot hero-tech-node-dot-warm"/>
-              <circle cx="116" cy="304" r="7" class="hero-tech-node-dot"/>
-            </svg>
-
-            <div class="hero-tech-core">
-              <span>system graph</span>
-              <strong>build stack</strong>
-              <p>field systems, controls, and software working as one layer</p>
-            </div>
-
-            <div class="hero-tech-track hero-tech-track-outer hero-tech-track-slow">
-              <div class="hero-tech-node hero-tech-node-top">
-                <strong>SynapticLYnk</strong>
-                <span>operations, routing, infrastructure</span>
-              </div>
-            </div>
-
-            <div class="hero-tech-track hero-tech-track-mid hero-tech-track-reverse">
-              <div class="hero-tech-node hero-tech-node-right">
-                <strong>ThermoNerve</strong>
-                <span>equipment, controls, embedded hardware</span>
-              </div>
-            </div>
-
-            <div class="hero-tech-track hero-tech-track-diagonal hero-tech-track-fast">
-              <div class="hero-tech-node hero-tech-node-left">
-                <strong>NervoBrain</strong>
-                <span>intelligence layer, AI workflow, system logic</span>
-              </div>
-            </div>
-          </div>
-        </aside>
       </div>
     </section>
 
