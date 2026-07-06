@@ -22,15 +22,21 @@
 }
 
 html {
+  min-height: 100%;
   scroll-behavior: smooth;
+  background-color: var(--bg-deep);
+  overscroll-behavior-y: none;
 }
 
 body {
   margin: 0;
   min-height: 100vh;
+  min-height: 100dvh;
   font-family: "IBM Plex Sans", sans-serif;
   color: var(--text);
   overflow-x: hidden;
+  position: relative;
+  background-color: var(--bg-deep);
   background:
     radial-gradient(circle at 82% 16%, rgba(222, 122, 49, 0.12), transparent 28%),
     radial-gradient(circle at 10% 34%, rgba(144, 185, 186, 0.12), transparent 24%),
@@ -178,6 +184,7 @@ body::before {
 .hero {
   position: relative;
   min-height: calc(100svh - 82px);
+  min-height: calc(100dvh - 82px);
   padding: clamp(0.45rem, 1.4vw, 0.8rem) 0 clamp(1.25rem, 2vw, 1.6rem);
   overflow: clip;
 }
@@ -188,6 +195,7 @@ body::before {
   position: relative;
   z-index: 2;
   min-height: clamp(35rem, calc(100svh - 82px - 0.2rem), 52rem);
+  min-height: clamp(35rem, calc(100dvh - 82px - 0.2rem), 52rem);
   display: flex;
   align-items: flex-start;
 }
