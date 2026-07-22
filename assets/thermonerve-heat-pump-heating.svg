@@ -1,0 +1,214 @@
+<!--
+  ThermoNerv embedded graphics export stub
+  Variant: heat-pump-heating
+  Layer: full
+  Source: npm run graphics:export
+  Bench/field hardware validation: tracked separately
+  Controller touchscreen dashboard export for TouchGFX and embedded UI handoff.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" class="heat-pump-svg" data-touchgfx-map="heat-pump" data-render-strategy="cached-static-with-dynamic-overlays" data-static-layer="cached-vector-base" data-dynamic-layers="flow-overlay rotor-overlay status-overlay telemetry-overlay" data-overlay-budget="small-dynamic-overlays" data-symbol-manifest="machine-map-symbols-v1" viewBox="0 52 860 405" preserveAspectRatio="none" role="img" aria-label="Heat pump reversible cycle schematic">
+      <style>
+        .pipe,
+        .coil-tube {
+          fill: none;
+          stroke-width: 12;
+          stroke-linecap: round;
+          stroke-linejoin: round;
+        }
+        .pipe.heat-discharge,
+        .coil-tube.heat-discharge { stroke: #ff9e69; }
+        .pipe.heat-liquid { stroke: #ffd36d; }
+        .pipe.heat-suction,
+        .coil-tube.heat-suction { stroke: #84c7ff; }
+        .pipe-dash {
+          fill: none;
+          stroke-width: 5;
+          stroke-linecap: round;
+          stroke-dasharray: 14 10;
+          stroke: #f1f5d1;
+          animation: dashFlow 7s linear infinite;
+        }
+        .case-box,
+        .reversing-valve,
+        .valve-spool,
+        .compressor-body,
+        .compressor-head,
+        .filter {
+          fill: #0f1716;
+          stroke: #385247;
+          stroke-width: 3;
+        }
+        .outdoor-case,
+        .indoor-case { fill: #11201d; }
+        .reversing-valve { fill: #141d22; stroke: #516472; }
+        .valve-spool { fill: #293946; stroke: #748697; }
+        .compressor-body { fill: #121821; stroke: #4b5c70; }
+        .compressor-head { fill: #1b2431; stroke: #627388; }
+        .compressor-fin {
+          stroke: #dfe8f2;
+          stroke-width: 3;
+          stroke-linecap: round;
+        }
+        .sight-glass {
+          fill: rgba(120, 222, 194, 0.15);
+          stroke: #8ff0d0;
+          stroke-width: 4;
+        }
+        .cycle-label,
+        .line-label,
+        .heat-role-label {
+          fill: #edf5ef;
+          font-family: Arial, sans-serif;
+          font-weight: 700;
+          letter-spacing: 0.04em;
+        }
+        .cycle-label,
+        .line-label { font-size: 17px; }
+        .heat-role-label {
+          font-size: 18px;
+          fill: #9bf3d6;
+        }
+        .heat-mode-label {
+          fill: #ffd699;
+          font-size: 22px;
+        }
+        .fan-rotor {
+          filter: drop-shadow(0 0 8px rgba(132, 241, 210, 0.18));
+        }
+        .fan-ring {
+          fill: rgba(134, 252, 220, 0.08);
+          stroke: #9cf0d5;
+          stroke-width: 2.8;
+        }
+        .fan-blade {
+          fill: rgba(134, 252, 220, 0.3);
+          stroke: rgba(156, 240, 213, 0.4);
+          stroke-width: 1.1;
+          stroke-linejoin: round;
+        }
+        .fan-hub {
+          fill: #e7fff7;
+          stroke: #9cf0d5;
+          stroke-width: 2;
+        }
+        .led {
+          stroke: #ebf6f0;
+          stroke-width: 1.5;
+        }
+        .led-on { fill: #90f3a8; filter: drop-shadow(0 0 6px rgba(144, 243, 168, 0.66)); }
+        .led-off.red { fill: #351d1b; }
+        .sensor-tag rect {
+          fill: rgba(13, 20, 18, 0.92);
+          stroke: #5b7d71;
+          stroke-width: 2;
+        }
+        .sensor-tag text {
+          fill: #eaf7ef;
+          font-family: Arial, sans-serif;
+          font-size: 15px;
+          font-weight: 700;
+          letter-spacing: 0.04em;
+        }
+        @keyframes dashFlow {
+          from { stroke-dashoffset: 0; }
+          to { stroke-dashoffset: -96; }
+        }
+        @keyframes rotorSpin {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+        }
+      </style>
+      <g data-render-layer="static-base" data-cache-policy="cache-on-profile-change">
+
+      <text class="line-label heat-mode-label" x="380" y="72">Heating</text>
+
+      <path class="pipe heat-discharge" d="M532 326 H550 V120 H610 V212 H620"></path>
+      <path class="pipe heat-liquid" d="M620 258 H680 V405 H190 V288 H238"></path>
+      <path class="pipe heat-suction" d="M274 220 H345 V120 H390 V326 H394"></path>
+
+      <rect class="case-box outdoor-case" x="22" y="154" width="252" height="138" rx="10"></rect>
+      <path data-symbol-id="coil-horizontal-4" class="coil-tube heat-suction" d="M50 186 H246 M50 210 H246 M50 234 H246 M50 258 H246"></path>
+      <text class="cycle-label heat-equipment-title" x="72" y="139">Outdoor HX</text>
+      <text class="heat-role-label" x="80" y="314">Outdoor Evap</text>
+
+      <rect class="case-box indoor-case" x="586" y="154" width="252" height="138" rx="10"></rect>
+      <path data-symbol-id="coil-horizontal-4" class="coil-tube heat-discharge" d="M614 186 H810 M614 210 H810 M614 234 H810 M614 258 H810"></path>
+      <text class="cycle-label heat-equipment-title" x="670" y="139">Indoor HX</text>
+      <text class="heat-role-label" x="646" y="314">Indoor Cond</text>
+
+      <rect class="reversing-valve" x="386" y="96" width="132" height="80" rx="14"></rect>
+      <rect class="valve-spool" x="406" y="118" width="92" height="20" rx="6"></rect>
+      <text class="cycle-label small-cycle-label" x="412" y="196">Rev Valve</text>
+      <text class="heat-role-label" x="440" y="214">Heat</text>
+
+      <rect class="compressor-body" x="394" y="292" width="84" height="68" rx="10"></rect>
+      <rect class="compressor-head" x="478" y="312" width="54" height="28" rx="8"></rect>
+      <path class="compressor-fin" d="M412 302 V352 M428 302 V352 M444 302 V352"></path>
+      <text class="cycle-label small-cycle-label" x="392" y="286">Compressor</text>
+
+      <circle class="sight-glass" cx="388" cy="405" r="15"></circle>
+      <text class="cycle-label small-cycle-label" x="362" y="440">Sight</text>
+      <rect class="filter" x="482" y="392" width="92" height="26" rx="13"></rect>
+      <text class="cycle-label small-cycle-label" x="506" y="440">Filter</text>
+
+      <text class="line-label small-line-label suction-label" x="304" y="284">Suction</text>
+      <text class="line-label small-line-label discharge-label" x="514" y="268">Hot Gas</text>
+      <text class="line-label small-line-label liquid-label" x="386" y="391">Liquid</text>
+
+    
+      </g>
+      <g data-render-layer="flow-overlay" data-overlay-layer="flow-overlay" data-overlay-policy="redraw-on-state-change">
+      <path data-render-layer="flow-overlay" class="pipe-dash heat-dash" d="M532 326 H550 V120 H610 V212 H620"></path>
+      <path data-render-layer="flow-overlay" class="pipe-dash heat-dash" d="M620 258 H680 V405 H190 V288 H238"></path>
+      <path data-render-layer="flow-overlay" class="pipe-dash heat-dash" d="M274 220 H345 V120 H390 V326 H394"></path>
+      <path data-render-layer="flow-overlay" data-symbol-id="coil-horizontal-4-flow" class="coil-tube pipe-dash heat-dash" d="M50 186 H246 M50 210 H246 M50 234 H246 M50 258 H246"></path>
+      <path data-render-layer="flow-overlay" data-symbol-id="coil-horizontal-4-flow" class="coil-tube pipe-dash heat-dash" d="M614 186 H810 M614 210 H810 M614 234 H810 M614 258 H810"></path>
+      </g>
+      <g data-render-layer="rotor-overlay" data-overlay-layer="rotor-overlay" data-overlay-policy="redraw-on-state-change">
+      <g data-render-layer="rotor-overlay" data-symbol-id="fan-rotor" transform="translate(105 222) scale(0.96)">
+        <g class="fan-rotor"><animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0" dur="9s" repeatCount="indefinite"></animateTransform><circle class="fan-ring" r="22"></circle><path class="fan-blade" d="M0 -16 C8 -16 13 -11 12 -4 C9 -4 5 -3 2 -1 C1 -5 -1 -10 0 -16 Z"></path><path class="fan-blade" transform="rotate(120)" d="M0 -16 C8 -16 13 -11 12 -4 C9 -4 5 -3 2 -1 C1 -5 -1 -10 0 -16 Z"></path><path class="fan-blade" transform="rotate(240)" d="M0 -16 C8 -16 13 -11 12 -4 C9 -4 5 -3 2 -1 C1 -5 -1 -10 0 -16 Z"></path><circle class="fan-hub" r="4.5"></circle></g>
+      </g>
+      <g data-render-layer="rotor-overlay" data-symbol-id="fan-rotor" transform="translate(194 222) scale(0.96)">
+        <g class="fan-rotor"><animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0" dur="9s" repeatCount="indefinite"></animateTransform><circle class="fan-ring" r="22"></circle><path class="fan-blade" d="M0 -16 C8 -16 13 -11 12 -4 C9 -4 5 -3 2 -1 C1 -5 -1 -10 0 -16 Z"></path><path class="fan-blade" transform="rotate(120)" d="M0 -16 C8 -16 13 -11 12 -4 C9 -4 5 -3 2 -1 C1 -5 -1 -10 0 -16 Z"></path><path class="fan-blade" transform="rotate(240)" d="M0 -16 C8 -16 13 -11 12 -4 C9 -4 5 -3 2 -1 C1 -5 -1 -10 0 -16 Z"></path><circle class="fan-hub" r="4.5"></circle></g>
+      </g>
+      <g data-render-layer="rotor-overlay" data-symbol-id="fan-rotor" transform="translate(670 222) scale(0.96)">
+        <g class="fan-rotor"><animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0" dur="9s" repeatCount="indefinite"></animateTransform><circle class="fan-ring" r="22"></circle><path class="fan-blade" d="M0 -16 C8 -16 13 -11 12 -4 C9 -4 5 -3 2 -1 C1 -5 -1 -10 0 -16 Z"></path><path class="fan-blade" transform="rotate(120)" d="M0 -16 C8 -16 13 -11 12 -4 C9 -4 5 -3 2 -1 C1 -5 -1 -10 0 -16 Z"></path><path class="fan-blade" transform="rotate(240)" d="M0 -16 C8 -16 13 -11 12 -4 C9 -4 5 -3 2 -1 C1 -5 -1 -10 0 -16 Z"></path><circle class="fan-hub" r="4.5"></circle></g>
+      </g>
+      <g data-render-layer="rotor-overlay" data-symbol-id="fan-rotor" transform="translate(758 222) scale(0.96)">
+        <g class="fan-rotor"><animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0" dur="9s" repeatCount="indefinite"></animateTransform><circle class="fan-ring" r="22"></circle><path class="fan-blade" d="M0 -16 C8 -16 13 -11 12 -4 C9 -4 5 -3 2 -1 C1 -5 -1 -10 0 -16 Z"></path><path class="fan-blade" transform="rotate(120)" d="M0 -16 C8 -16 13 -11 12 -4 C9 -4 5 -3 2 -1 C1 -5 -1 -10 0 -16 Z"></path><path class="fan-blade" transform="rotate(240)" d="M0 -16 C8 -16 13 -11 12 -4 C9 -4 5 -3 2 -1 C1 -5 -1 -10 0 -16 Z"></path><circle class="fan-hub" r="4.5"></circle></g>
+      </g>
+      </g>
+      <g data-render-layer="status-overlay" data-overlay-layer="status-overlay" data-overlay-policy="redraw-on-state-change">
+      <circle data-render-layer="status-overlay" class="led led-off" cx="502" cy="150" r="5"></circle>
+      <circle data-render-layer="status-overlay" class="led led-on red" cx="502" cy="166" r="5"></circle>
+      <circle data-render-layer="status-overlay" class="led led-on" cx="464" cy="304" r="5"></circle>
+      <circle data-render-layer="status-overlay" class="led led-off red" cx="464" cy="320" r="5"></circle>
+      </g>
+      <g data-render-layer="telemetry-overlay" data-overlay-layer="telemetry-overlay" data-overlay-policy="redraw-on-state-change">
+      <g data-render-layer="telemetry-overlay" class="sensor-tag temp-tag">
+        <rect x="706" y="320" width="84" height="26" rx="6"></rect>
+        <text x="714" y="338">ICT 40 C</text>
+      </g>
+      <g data-render-layer="telemetry-overlay" class="sensor-tag temp-tag">
+        <rect x="58" y="320" width="84" height="26" rx="6"></rect>
+        <text x="66" y="338">OAT 1 C</text>
+      </g>
+      <g data-render-layer="telemetry-overlay" class="sensor-tag suction-tag">
+        <rect x="286" y="292" width="76" height="26" rx="6"></rect>
+        <text x="294" y="310">LP 32</text>
+      </g>
+      <g data-render-layer="telemetry-overlay" class="sensor-tag temp-tag">
+        <rect x="286" y="320" width="76" height="26" rx="6"></rect>
+        <text x="294" y="338">ST -2 C</text>
+      </g>
+      <g data-render-layer="telemetry-overlay" class="sensor-tag discharge-tag">
+        <rect x="540" y="306" width="78" height="26" rx="6"></rect>
+        <text x="548" y="324">HP 285</text>
+      </g>
+      <g data-render-layer="telemetry-overlay" class="sensor-tag temp-tag">
+        <rect x="540" y="334" width="78" height="26" rx="6"></rect>
+        <text x="548" y="352">DT 74 C</text>
+      </g>
+      </g>
+</svg>
+

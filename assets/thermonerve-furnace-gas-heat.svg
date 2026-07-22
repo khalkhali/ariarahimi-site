@@ -1,0 +1,219 @@
+<!--
+  ThermoNerv embedded graphics export stub
+  Variant: furnace-gas-heat
+  Layer: full
+  Source: npm run graphics:export
+  Bench/field hardware validation: tracked separately
+  Controller touchscreen dashboard export for TouchGFX and embedded UI handoff.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" class="furnace-svg" data-touchgfx-map="furnace" data-render-strategy="cached-static-with-dynamic-overlays" data-static-layer="cached-vector-base" data-dynamic-layers="flow-overlay rotor-overlay status-overlay telemetry-overlay" data-overlay-budget="small-dynamic-overlays" data-symbol-manifest="machine-map-symbols-v1" viewBox="0 0 860 455" role="img" aria-label="Gas Furnace furnace and air handler schematic">
+      <style>
+        .air-path,
+        .combustion-path,
+        .gas-line {
+          fill: none;
+          stroke-width: 12;
+          stroke-linecap: round;
+          stroke-linejoin: round;
+        }
+        .air-path.return-air { stroke: #90b8ff; }
+        .air-path.supply-air,
+        .air-path.heated-air { stroke: #ffb970; }
+        .combustion-path { stroke: #ffd16f; stroke-width: 8; }
+        .gas-line { stroke: #b0f0d7; stroke-width: 7; }
+        .duct-section,
+        .filter,
+        .blower-housing,
+        .heat-cabinet,
+        .safety-controller,
+        .gas-valve {
+          fill: #111917;
+          stroke: #3f584d;
+          stroke-width: 3;
+        }
+        .return-duct,
+        .supply-duct,
+        .heat-cabinet { fill: #13211d; }
+        .safety-controller { fill: #16221f; }
+        .gas-valve { fill: #172321; stroke: #6f8f81; }
+        .filter-lines,
+        .heat-exchanger {
+          fill: none;
+          stroke: #dfe8dd;
+          stroke-width: 4;
+          stroke-linecap: round;
+        }
+        .heat-exchanger.active {
+          stroke: #ffbe6a;
+          filter: drop-shadow(0 0 10px rgba(255, 190, 106, 0.45));
+        }
+        .line-label,
+        .cycle-label,
+        .heat-role-label {
+          fill: #eef5ef;
+          font-family: Arial, sans-serif;
+          font-weight: 700;
+          letter-spacing: 0.04em;
+        }
+        .cycle-label.small-cycle-label { font-size: 18px; }
+        .cycle-label.tiny-cycle-label,
+        .line-label.small-line-label { font-size: 15px; }
+        .line-label.heat-mode-label { font-size: 24px; fill: #ffd699; }
+        .heat-role-label { font-size: 18px; fill: #99efd1; }
+        .fan-rotor {
+          filter: drop-shadow(0 0 8px rgba(132, 241, 210, 0.18));
+        }
+        .fan-ring {
+          fill: rgba(137, 247, 220, 0.08);
+          stroke: #a5f5db;
+          stroke-width: 2.8;
+        }
+        .fan-blade {
+          fill: rgba(137, 247, 220, 0.3);
+          stroke: rgba(165, 245, 219, 0.42);
+          stroke-width: 1.1;
+          stroke-linejoin: round;
+        }
+        .fan-hub {
+          fill: #e7fff7;
+          stroke: #a5f5db;
+          stroke-width: 2;
+        }
+        .burner-rack rect {
+          fill: #191512;
+          stroke: #b17a32;
+          stroke-width: 2;
+        }
+        .flame {
+          fill: rgba(255, 174, 89, 0.24);
+          stroke: #ffc56d;
+          stroke-width: 3;
+          stroke-linejoin: round;
+        }
+        .led {
+          stroke: rgba(255, 255, 255, 0.6);
+          stroke-width: 2;
+        }
+        .led-on { fill: #89ffd8; filter: drop-shadow(0 0 7px rgba(137, 255, 216, 0.55)); }
+        .led-off { fill: #39423e; }
+        .led-on.red { fill: #ff6c6c; filter: drop-shadow(0 0 8px rgba(255, 108, 108, 0.5)); }
+        .sensor-tag rect {
+          fill: #111716;
+          stroke: #546b60;
+          stroke-width: 2;
+        }
+        .sensor-tag text {
+          fill: #eef5ef;
+          font-family: Arial, sans-serif;
+          font-size: 14px;
+          font-weight: 700;
+          letter-spacing: 0.04em;
+        }
+        .temp-tag rect { stroke: #7cd7b3; }
+        .suction-tag rect { stroke: #8fb6ff; }
+        .discharge-tag rect { stroke: #ffb879; }
+      </style>
+      <g data-render-layer="static-base" data-cache-policy="cache-on-profile-change">
+
+      <text class="line-label heat-mode-label" x="366" y="42">Gas Furnace</text>
+      <text class="heat-role-label" x="414" y="68">Heat Call</text>
+
+      <path class="air-path return-air" d="M52 322 H198"></path>
+      <path class="air-path supply-air heated-air" d="M610 322 H812"></path>
+      <path class="air-path supply-air heated-air" d="M354 322 H610"></path>
+
+      <rect class="duct-section return-duct" x="44" y="278" width="150" height="88" rx="10"></rect>
+      <text class="cycle-label small-cycle-label" x="70" y="270">Return Air</text>
+
+      <rect class="filter" x="210" y="278" width="58" height="88" rx="10"></rect>
+      <path class="filter-lines" d="M224 292 L254 352 M238 292 L268 352 M210 306 L240 366"></path>
+      <text class="cycle-label tiny-cycle-label" x="208" y="386">Filter</text>
+
+      <rect class="blower-housing" x="288" y="262" width="92" height="116" rx="14"></rect>
+      <text class="cycle-label tiny-cycle-label" x="302" y="404">Blower</text>
+
+      <rect class="heat-cabinet" x="410" y="220" width="188" height="176" rx="14"></rect>
+      <text class="cycle-label small-cycle-label" x="496" y="210">HX</text>
+      
+
+      <rect class="duct-section supply-duct" x="620" y="278" width="198" height="88" rx="10"></rect>
+      <text class="cycle-label small-cycle-label" x="662" y="270">Supply Air</text>
+
+      <rect class="safety-controller" x="292" y="82" width="276" height="88" rx="12"></rect>
+      <text class="cycle-label small-cycle-label" x="386" y="116">Safety Ctrl</text>
+      <text class="heat-role-label" x="380" y="144">Safety Lockout</text>
+
+      
+      <rect class="inducer-housing" x="642" y="82" width="92" height="64" rx="12"></rect>
+      <text class="cycle-label tiny-cycle-label" x="660" y="76">Ind Fan</text>
+      <text class="cycle-label tiny-cycle-label" x="178" y="88">Gas</text>
+
+
+      <text class="line-label small-line-label suction-label" x="70" y="314">Return</text>
+      <text class="line-label small-line-label liquid-label" x="666" y="314">Supply</text>
+    
+      </g>
+      <g data-render-layer="flow-overlay" data-overlay-layer="flow-overlay" data-overlay-policy="redraw-on-state-change">
+      <path data-render-layer="flow-overlay" class="air-dash return-air-dash" d="M52 322 H198"></path>
+      <path data-render-layer="flow-overlay" class="air-dash supply-air-dash" d="M610 322 H812"></path>
+      <path data-render-layer="flow-overlay" class="air-dash supply-air-dash" d="M354 322 H610"></path>
+      <path data-render-layer="flow-overlay" class="combustion-dash" d="M500 220 V178 H686 V110"></path>
+      <path data-render-layer="flow-overlay" class="gas-line-dash" d="M248 123 H372 V366 H438"></path>
+      </g>
+      <g data-render-layer="rotor-overlay" data-overlay-layer="rotor-overlay" data-overlay-policy="redraw-on-state-change">
+      <g data-render-layer="rotor-overlay" data-symbol-id="fan-rotor" transform="translate(334 320) scale(1.39)">
+        <g class="fan-rotor">
+          <circle class="fan-ring" r="22"></circle>
+          <path class="fan-blade" d="M0 -16 C8 -16 13 -11 12 -4 C9 -4 5 -3 2 -1 C1 -5 -1 -10 0 -16 Z"></path>
+          <path class="fan-blade" transform="rotate(120)" d="M0 -16 C8 -16 13 -11 12 -4 C9 -4 5 -3 2 -1 C1 -5 -1 -10 0 -16 Z"></path>
+          <path class="fan-blade" transform="rotate(240)" d="M0 -16 C8 -16 13 -11 12 -4 C9 -4 5 -3 2 -1 C1 -5 -1 -10 0 -16 Z"></path>
+          <circle class="fan-hub" r="4.5"></circle>
+        </g>
+      </g>
+      <g data-render-layer="rotor-overlay" data-symbol-id="fan-rotor" transform="translate(688 114) scale(0.91)">
+        <g class="fan-rotor">
+          <circle class="fan-ring" r="22"></circle>
+          <path class="fan-blade" d="M0 -16 C8 -16 13 -11 12 -4 C9 -4 5 -3 2 -1 C1 -5 -1 -10 0 -16 Z"></path>
+          <path class="fan-blade" transform="rotate(120)" d="M0 -16 C8 -16 13 -11 12 -4 C9 -4 5 -3 2 -1 C1 -5 -1 -10 0 -16 Z"></path>
+          <path class="fan-blade" transform="rotate(240)" d="M0 -16 C8 -16 13 -11 12 -4 C9 -4 5 -3 2 -1 C1 -5 -1 -10 0 -16 Z"></path>
+          <circle class="fan-hub" r="4.5"></circle>
+        </g>
+      </g>
+      </g>
+      <g data-render-layer="status-overlay" data-overlay-layer="status-overlay" data-overlay-policy="redraw-on-state-change">
+      <circle data-render-layer="status-overlay" class="led led-on" cx="366" cy="276" r="5"></circle>
+      <path data-render-layer="status-overlay" class="heat-exchanger active" d="M452 362 V334 L438 318 V282 L452 264 V238 M500 362 V334 L486 318 V282 L500 264 V238 M548 362 V334 L534 318 V282 L548 264 V238"></path>
+      <g data-render-layer="status-overlay" class="burner-rack ">
+        <rect x="438" y="366" width="132" height="16" rx="7"></rect>
+        <path class="flame" d="M466 365 L456 346 L472 334 L468 318 L490 340 L482 365 M522 365 L512 346 L528 334 L524 318 L546 340 L538 365"></path>
+      </g>
+      <circle data-render-layer="status-overlay" class="led led-off" cx="536" cy="102" r="6"></circle>
+      <circle data-render-layer="status-overlay" class="led led-on red" cx="536" cy="124" r="6"></circle>
+      <path data-render-layer="status-overlay" class="combustion-path " d="M500 220 V178 H686 V110"></path>
+      <rect data-render-layer="status-overlay" class="gas-valve " x="144" y="96" width="104" height="54" rx="10"></rect>
+      <path data-render-layer="status-overlay" class="gas-line " d="M248 123 H372 V366 H438"></path>
+      </g>
+      <g data-render-layer="telemetry-overlay" data-overlay-layer="telemetry-overlay" data-overlay-policy="redraw-on-state-change">
+      <g data-render-layer="telemetry-overlay" class="sensor-tag temp-tag">
+        <rect x="66" y="374" width="96" height="26" rx="6"></rect>
+        <text x="74" y="392">RAT 21 C</text>
+      </g>
+      <g data-render-layer="telemetry-overlay" class="sensor-tag temp-tag">
+        <rect x="674" y="374" width="96" height="26" rx="6"></rect>
+        <text x="682" y="392">SAT 49 C</text>
+      </g>
+      <g data-render-layer="telemetry-overlay" class="sensor-tag discharge-tag">
+        <rect x="64" y="112" width="82" height="26" rx="6"></rect>
+        <text x="72" y="130">GV locked</text>
+      </g>
+      <g data-render-layer="telemetry-overlay" class="sensor-tag suction-tag">
+        <rect x="304" y="178" width="76" height="26" rx="6"></rect>
+        <text x="312" y="196">BLW ON</text>
+      </g>
+      <g data-render-layer="telemetry-overlay" class="sensor-tag temp-tag">
+        <rect x="430" y="178" width="86" height="26" rx="6"></rect>
+        <text x="438" y="196">HT CALL</text>
+      </g>
+      </g>
+</svg>
+

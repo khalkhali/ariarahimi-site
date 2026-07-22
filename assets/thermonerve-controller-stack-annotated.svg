@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2200 1400" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="2200" y2="1400" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0d120f"/>
+      <stop offset="1" stop-color="#141b17"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1310 760) rotate(90) scale(460 620)">
+      <stop stop-color="rgba(141,195,165,0.18)"/>
+      <stop offset="1" stop-color="rgba(141,195,165,0)"/>
+    </radialGradient>
+    <filter id="panelShadow" x="-10%" y="-10%" width="130%" height="140%">
+      <feDropShadow dx="0" dy="20" stdDeviation="30" flood-color="#000" flood-opacity=".3"/>
+    </filter>
+    <filter id="labelShadow" x="-20%" y="-20%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000" flood-opacity=".3"/>
+    </filter>
+    <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="7" orient="auto">
+      <path d="M0 0L14 7L0 14L4 7Z" fill="#8dc3a5"/>
+    </marker>
+    <style>
+      .title { font: 700 46px 'Segoe UI', Arial, sans-serif; fill: #f4f1ea; letter-spacing: .02em; }
+      .subtitle { font: 500 20px 'Segoe UI', Arial, sans-serif; fill: #b3b8af; }
+      .label { font: 700 21px 'Segoe UI', Arial, sans-serif; fill: #f4f1ea; letter-spacing: .08em; text-transform: uppercase; }
+      .body { font: 500 18px 'Segoe UI', Arial, sans-serif; fill: #cbd2ca; }
+      .small { font: 600 17px 'Segoe UI', Arial, sans-serif; fill: #d9dfd8; }
+      .line { stroke: #8dc3a5; stroke-width: 3.5; stroke-linecap: round; marker-end: url(#arrow); }
+      .dot { fill: #8dc3a5; }
+      .chip { fill: rgba(141,195,165,0.08); stroke: rgba(141,195,165,0.22); }
+    </style>
+  </defs>
+
+  <rect width="2200" height="1400" fill="url(#bg)"/>
+  <rect width="2200" height="1400" fill="url(#glow)"/>
+
+  <g filter="url(#panelShadow)">
+    <rect x="72" y="84" width="2056" height="1232" rx="36" fill="#121914"/>
+  </g>
+
+  <text x="126" y="166" class="title">ThermoNerve Controller Stack</text>
+  <text x="126" y="206" class="subtitle">Exploded annotated view of the three-board architecture: touch display, core logic, and main field I/O.</text>
+
+  <image href="screen-board-render.svg?v=exact-screen-1" x="1100" y="170" width="760" height="450" preserveAspectRatio="xMidYMid meet"/>
+  <image href="core-board-render.svg?v=flat-black-3" x="1225" y="520" width="420" height="440" preserveAspectRatio="xMidYMid meet"/>
+  <image href="main-board-render.svg?v=flat-black-3" x="930" y="835" width="980" height="585" preserveAspectRatio="xMidYMid meet"/>
+
+  <g filter="url(#labelShadow)">
+    <circle cx="1475" cy="364" r="7" class="dot"/>
+    <path d="M312 304H742L1475 364" class="line"/>
+    <text x="126" y="290" class="label">Touch Display Board</text>
+    <text x="126" y="322" class="body">Top layer for user interaction.</text>
+    <text x="126" y="350" class="body">Carries the display, rotary encoder, buttons, and status LEDs.</text>
+  </g>
+
+  <g filter="url(#labelShadow)">
+    <circle cx="1430" cy="736" r="7" class="dot"/>
+    <path d="M314 674H760L1430 736" class="line"/>
+    <text x="126" y="660" class="label">Core Board</text>
+    <text x="126" y="692" class="body">Middle compute and logic layer.</text>
+    <text x="126" y="720" class="body">Hosts processing, memory, headers, and inter-board control signals.</text>
+  </g>
+
+  <g filter="url(#labelShadow)">
+    <circle cx="1444" cy="1110" r="7" class="dot"/>
+    <path d="M316 1044H788L1444 1110" class="line"/>
+    <text x="126" y="1030" class="label">Main Board</text>
+    <text x="126" y="1062" class="body">Bottom field interface and power layer.</text>
+    <text x="126" y="1090" class="body">Handles terminals, relays, capacitors, power regulation, and equipment wiring.</text>
+  </g>
+
+  <g filter="url(#labelShadow)">
+    <circle cx="1690" cy="352" r="7" class="dot"/>
+    <path d="M1850 254H2048V328L1690 352" class="line"/>
+    <text x="1718" y="240" class="label">User Controls</text>
+    <text x="1718" y="272" class="body">Rotary encoder, tactile buttons, and LEDs live here.</text>
+  </g>
+
+  <g filter="url(#labelShadow)">
+    <circle cx="1538" cy="638" r="7" class="dot"/>
+    <path d="M1828 620H2054V680L1538 638" class="line"/>
+    <text x="1700" y="606" class="label">Board-to-Board Link</text>
+    <text x="1700" y="638" class="body">The core board bridges display logic and field hardware behavior.</text>
+  </g>
+
+  <g filter="url(#labelShadow)">
+    <circle cx="1710" cy="1048" r="7" class="dot"/>
+    <path d="M1832 966H2056V1016L1710 1048" class="line"/>
+    <text x="1712" y="952" class="label">Field Hardware Interface</text>
+    <text x="1712" y="984" class="body">Terminal blocks, relays, and power zones connect the controller to real equipment.</text>
+  </g>
+
+  <g opacity=".96">
+    <rect x="128" y="1186" width="1944" height="76" rx="24" class="chip"/>
+    <text x="156" y="1222" class="small">How the stack works:</text>
+    <text x="318" y="1222" class="body">the touch display board handles local interaction, the core board runs logic and coordination, and the main board connects that logic to field wiring, sensing, switching, and power.</text>
+  </g>
+</svg>
